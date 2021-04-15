@@ -1,14 +1,38 @@
 <head>
 
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			
+	<script src="jquery-ui/jquery-ui.js"></script>
+	
+	<style type="text/css">
+	
+			.bigger {font-size:200%;
+					color: blue;
+					}
+	
+	
+	</style>
+
 <title>AliVids</title>
+
 
 </head>
 
 <body>
 
-<label for="search">Search: </label>
-<input type="text" id="search" name="search">
-<input type="submit" value="submit"
+<h2>Welcome to <span class='bigger'>AliVids</span></h2>
 
+<input type="text" name="singular" id="singular">
+<a href="/#SINGULAR/.html" id="myLink">search</a>
+
+
+<script>
+
+	$('#singular').on('input', function() {
+  $('#myLink').prop('href', "https://www.aliexpress.com/af/" + this.value + ".html");
+});	
+
+
+</script>
 
 </body>
